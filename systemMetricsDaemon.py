@@ -21,7 +21,7 @@ def io_change(last, current):
 
 while True:
 
-    memory          = psutil.phymem_usage()
+    memory          = psutil.virtual_memory()
     disk            = psutil.disk_usage("/")
     disk_io         = psutil.disk_io_counters()
     disk_io_change  = io_change(last_disk_io, disk_io)
